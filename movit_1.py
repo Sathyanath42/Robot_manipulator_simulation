@@ -56,8 +56,7 @@ def main():
 
         #opening the hand of the panda arm     
         gripper = moveit_commander.MoveGroupCommander("panda_arm_hand")
-        gripper.set_named_target("open")
-        gripper.go()        
+     
         
         #code to move the robot hand to the cube location
         
