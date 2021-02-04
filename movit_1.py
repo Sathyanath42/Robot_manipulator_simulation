@@ -36,9 +36,9 @@ def main():
  
         #creating cube and table
         # clean the scene
-        scene.remove_world_object("table")
+        scene.remove_world_object("table")     #add code for adding cube and table to the environ
         scene.remove_world_object("cube")
-
+       
 
         #resetting the robot arm to prevent singularity
         print"moving joints to defined orientation to avoid singularity"
@@ -54,10 +54,19 @@ def main():
         move_group.go(joint_goal, wait=True)
         move_group.stop()
 
-        #opening the hand of the panda arm
+        #opening the hand of the panda arm     
         gripper = moveit_commander.MoveGroupCommander("panda_arm_hand")
         gripper.set_named_target("open")
         gripper.go()        
+        
+        #code to move the robot hand to the cube location
+        
+        #code to pick up the cube without collision
+        
+        #code to follow the problem statement trajectory
+        
+        #code to detach the cube from the hand
+        
 
     except rospy.ROSInterruptException:
         return
