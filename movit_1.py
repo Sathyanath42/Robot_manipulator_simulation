@@ -35,9 +35,30 @@ def main():
         print robot.get_current_state()
  
         #creating cube and table
-        # clean the scene
-        scene.remove_world_object("table")     #add code for adding cube and table to the environ
-        scene.remove_world_object("cube")
+        rospy.sleep(1)
+
+        print"creating the scene"
+        # publish a demo scene
+        dem = moveit_commander.PoseStamped()
+        dem.header.frame_id = robot.get_planning_frame()
+
+        # add a pickup table
+        dem.pose.position.x = 0.42
+        dem.pose.position.y = -0.2
+        dem.pose.position.z = 0.3
+        scene.add_box("table1", dem, (0.1, 1.5, 0.6))
+
+        # add a drop off table
+        dem.pose.position.x = -0.42
+        dem.pose.position.y = -0.2
+        dem.pose.position.z = 0.3
+        scene.add_box("table2", dem, (0.1, 1.5, 0.6))
+
+        # add an object to be grasped
+        dem.pose.position.x = 0.42
+        dem.pose.position.y = -0.2
+        dem.pose.position.z = 0.61
+        scene.add_box("cube", dem, (0.035, 0.035, 0.035))
        
 
         #resetting the robot arm to prevent singularity
@@ -55,9 +76,7 @@ def main():
         move_group.stop()
 
         #opening the hand of the panda arm     
-        gripper = moveit_commander.MoveGroupCommander("panda_arm_hand")
-     
-        
+   
         #code to move the robot hand to the cube location
         
         #code to pick up the cube without collision
