@@ -1,5 +1,5 @@
 # Vention_task
-A record of the work done to accomplish the given task: A pick and place robot manipulator simulation
+A pick and place robot manipulator simulation
 
 *****
 SETUP
