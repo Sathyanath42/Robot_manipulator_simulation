@@ -22,3 +22,8 @@ git clone https://github.com/ros-planning/panda_moveit_config.git -b melodic-dev
 ~~~
 * Copy the python file into the scripts folder within the source folder
 * Run it from there or call the node directly with rosrun
+~~~
+$roslaunch panda_moveit_config demo.launch
+$rosrun <...folder_name...> movit_1.py
+
+~~~
