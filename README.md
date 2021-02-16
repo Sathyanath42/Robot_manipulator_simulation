@@ -1,5 +1,5 @@
-# Robot manipulator
-A pick and place robot manipulator simulation
+# Robot manipulator simulation over ROS
+A pick and place application
 
 *****
 SETUP
