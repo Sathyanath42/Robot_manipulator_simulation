@@ -1,4 +1,4 @@
-# Vention_task
+# Robot manipulator
 A pick and place robot manipulator simulation
 
 *****
