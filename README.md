@@ -25,5 +25,5 @@ git clone https://github.com/ros-planning/panda_moveit_config.git -b melodic-dev
 ~~~
 $roslaunch panda_moveit_config demo.launch
 $rosrun <...folder_name...> movit_1.py
-
 ~~~
+[DEMO](https://youtu.be/iw_fKtM9n5I)
